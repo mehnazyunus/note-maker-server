@@ -6,6 +6,7 @@ var Schema = mongoose.Schema;
 var noteSchema = new Schema ( {
     title: {type: String, required: true},
     content: {type: String, required: true},
+    imageURL: {type: String},
     createdBy : {type: mongoose.Schema.Types.ObjectId, ref:'User'},
     date : {type: Date, required: true},
     done: {type: Boolean, required : true}
