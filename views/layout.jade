@@ -3,5 +3,7 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script.
+      history.replaceState('data to be passed', 'NoteMaker', 'https://notemaker-server.herokuapp.com/notes');
   body
     block content
