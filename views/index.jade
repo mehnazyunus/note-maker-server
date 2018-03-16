@@ -7,10 +7,5 @@ block content
   else
    img(src='#{imageURL}')
 
-  if pageURL == undefined
-   script.
-    history.replaceState( null, null, 'https://notemaker-server.herokuapp.com/notes');
-  else
-   script.
-     history.replaceState( null, null, '#{pageURL}');
-    
+  if pageURL != undefined
+  	a(href='#{pageURL}') View Original Page

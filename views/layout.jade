@@ -4,6 +4,8 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script.
+      history.replaceState( null, null, 'https://notemaker-server.herokuapp.com/notes');
       
   body
     block content
