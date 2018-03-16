@@ -1,20 +1,8 @@
-doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    
-  body
+extends layout
 
+block content
   h1= title
   p #{content}
   if imageURL == undefined
   else
    img(src='#{imageURL}')
-
-  if pageURL == undefined
-   script.
-    history.replaceState('data to be passed', 'NoteMaker', https://notemaker-server.herokuapp.com/notes');
-  else
-   script.
-    history.replaceState('data to be passed', 'NoteMaker', '#{pageURL}');
