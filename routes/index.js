@@ -10,7 +10,7 @@ router.get('/notes_show/:id', function(req, res, next) {
             res.send(err);
         else
         {
-            res.render('index',{title:notes.title , content: notes.content, imageURL: notes.imageURL});
+            res.render('index',{title:notes.title , content: notes.content, imageURL: notes.imageURL, pageURL: notes.pageURL});
         }
     })
 });
