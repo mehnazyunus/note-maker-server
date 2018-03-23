@@ -4,6 +4,7 @@ var userMiddleWare = require('../middlewares/userMiddleware');
 var router = express.Router();
 
 /* GET users listing. */
+/*
 router.get('/', function(req, res, next) {
 
   User.find(function(err, users) {
@@ -14,6 +15,7 @@ router.get('/', function(req, res, next) {
 
   });
 });
+*/
 
 // To create/register a user
 router.post('/', function (req,res, next) {
