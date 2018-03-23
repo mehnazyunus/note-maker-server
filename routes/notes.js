@@ -19,8 +19,7 @@ router.post('/', function (req,res, next) {
     });
 });
 
-// to get all the notes
-// in frontend we will check for the particular user and display only that notes
+// to get all the notes of a particular user
 router.get('/:id', function (req,res,next) {
     var id = req.params.id;
     Note.find({createdBy: id},function(err,notes){
