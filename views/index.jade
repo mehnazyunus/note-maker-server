@@ -1,10 +1,22 @@
 extends layout
 
 block content
-  h1= title
-  p #{content}
-  if imageURL == undefined
-  else
-   img(src='#{imageURL}')
-  if pageURL != undefined
-   a(href='#{pageURL}', target='_blank') View Original Page
+    //nav.navbar.navbar-inverse
+    //    .container-fluid
+    //        .navbar-header
+    //            a.navbar-brand(href='#') NoteMaker
+
+    .container
+      .row
+       .col-sm-6.col-sm-offset-3
+           .panel.panel-info
+               .panel-heading
+                    h1=title
+               .panel-body
+                    p #{content}
+                    if imageURL == undefined
+                    else
+                     img.img-responsive(src='#{imageURL}', style='height: 200px; width:400px')
+               .panel-footer
+                    if pageURL != undefined
+                     a(href='#{pageURL}', target='_blank') View Original Page
